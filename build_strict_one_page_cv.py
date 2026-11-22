@@ -123,8 +123,8 @@ def build_monochrome_one_page_cv(output_path):
     story.append(Paragraph("ASMAN MAKERO MUSA", name_style))
     story.append(Spacer(1, 2))
     contact_text = (
-        "Nairobi, Kenya &nbsp;|&nbsp; "
-        "<a href='mailto:makeromusa17@gmail.com'>makeromusa17@gmail.com</a> &nbsp;|&nbsp; "
+        "<a href='mailto:makeromusa17@gmail.com'>Email</a> &nbsp;|&nbsp; "
+        "<a href='https://linkedin.com/in/asman-musa-872405371'>LinkedIn</a> &nbsp;|&nbsp; "
         "<a href='https://github.com/makeromusa'>github.com/makeromusa</a> &nbsp;|&nbsp; "
         "<a href='https://www.makeromusa.me'>makeromusa.me</a>"
     )
@@ -142,11 +142,11 @@ def build_monochrome_one_page_cv(output_path):
     edu_row = [
         [
             Paragraph("<b>University of Nairobi</b>", item_title),
-            Paragraph("Nairobi, Kenya", item_right)
+            Paragraph("Expected Graduation: 2029", item_right_bold)
         ],
         [
-            Paragraph("<i>Bachelor of Science in Computer Science</i>", item_sub),
-            Paragraph("Expected Dec 2029", item_right_bold)
+            Paragraph("<i>Bachelor of Science in Computer Science (Second Year)</i>", item_sub),
+            Paragraph("", item_right)
         ]
     ]
     t_edu = Table(edu_row, colWidths=[370, content_width - 370])
@@ -158,7 +158,7 @@ def build_monochrome_one_page_cv(output_path):
         ('BOTTOMPADDING', (0,0), (-1,-1), 1),
     ]))
     story.append(t_edu)
-    story.append(Paragraph("<b>Relevant Coursework:</b> Linear Algebra, Multivariate Calculus, Probability &amp; Statistics, Discrete Mathematics, Data Structures &amp; Algorithms, Database Management Systems, Systems Programming (C/C++).", bullet_style))
+    story.append(Paragraph("<b>Relevant Coursework:</b> Data Structures &amp; Algorithms, Systems Programming (C/C++), Database Management Systems, Discrete Mathematics, Linear Algebra, Multivariate Calculus, Probability &amp; Statistics.", bullet_style))
     story.append(Spacer(1, 2))
 
     # 3. PROFESSIONAL EXPERIENCE
@@ -166,11 +166,11 @@ def build_monochrome_one_page_cv(output_path):
     exp_row = [
         [
             Paragraph("<b>Equity Bank Kenya</b> &nbsp;|&nbsp; <i>Equity Leaders Program</i>", item_title),
-            Paragraph("Nairobi, Kenya", item_right)
+            Paragraph("Feb 2024 – Jul 2024", item_right)
         ],
         [
             Paragraph("<i>Intern – Bancassurance Operations &amp; Customer Service</i>", item_sub),
-            Paragraph("Feb 2024 – Jul 2024", item_right)
+            Paragraph("", item_right)
         ]
     ]
     t_exp = Table(exp_row, colWidths=[380, content_width - 380])
@@ -256,7 +256,7 @@ def build_monochrome_one_page_cv(output_path):
     add_section("TECHNICAL SKILLS &amp; CREDENTIALS")
     story.append(Paragraph("<b>Languages:</b> C, C++, Python, TypeScript, SQL, HTML5/CSS3", skill_style))
     story.append(Paragraph("<b>Systems &amp; Databases:</b> Red Hat Enterprise Linux, PostgreSQL (Row-Level Security), Oracle Database, SQL Server, 3NF Modeling", skill_style))
-    story.append(Paragraph("<b>AI &amp; Cloud:</b> RAG Pipelines, Dense Vector Embeddings (ChromaDB), LLM Evaluation &amp; Benchmarking, AWS Bedrock, Microsoft Azure (AZ-900), Next.js 15, Vercel", skill_style))
+    story.append(Paragraph("<b>AI &amp; Cloud:</b> RAG Pipelines, Vector Embeddings (pgvector), LLM Evaluation &amp; Benchmarking, AWS Bedrock, Microsoft Azure (AZ-900), Next.js 15, FastAPI", skill_style))
     story.append(Paragraph("<b>Verified Certifications:</b> Microsoft Certified: Azure Fundamentals (AZ-900, ID: B489EE0F3C55EFF8) &nbsp;|&nbsp; Cisco C++ Advanced &nbsp;|&nbsp; Red Hat Linux (RH104)", skill_style))
 
     doc.build(story)
